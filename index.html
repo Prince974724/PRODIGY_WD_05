@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Responsive Weather App</title>
+<meta name="description" content="A responsive weather app that fetches current weather data based on user location or input." />
+</head>
+<body>
+<header>
+  <div class="logo" tabindex="0" aria-label="Weather App Logo">Weather App</div>
+  <button class="material-icons mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+    menu
+  </button>
+  <nav class="desktop-nav" aria-label="Primary navigation">
+    <a href="#" aria-current="page">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#" aria-current="page" tabindex="-1">Home</a>
+    <a href="#about" tabindex="-1">About</a>
+    <a href="#contact" tabindex="-1">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="weather-container" aria-live="polite" aria-atomic="true" aria-relevant="additions">
+    <form id="location-form" role="search" aria-label="Search weather by location">
+      <input type="text" id="location-input" name="location" placeholder="Enter city or location" aria-label="Enter city or location"/>
+      <button type="submit" aria-label="Get Weather">Search</button>
+    </form>
+    <div id="weather-info" class="weather-info" role="region" aria-live="polite" aria-atomic="true">
+      <p>Loading weather data...</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2024 WeatherApp. All Rights Reserved.
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
